@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    background: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #0066cc;
+    color: #fff;
+    padding: 0.7rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: "Acme", sans-serif;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+}
+
+.subtitle span {
+    color: #ffe600;
+    font-weight: 600;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.bio h2,
+.info h2,
+.gallery h2 {
+    color: #0066cc;
+    margin-bottom: 1rem;
+    border-left: 4px solid #0066cc;
+    padding-left: 0.5rem;
+}
+
+.highlight {
+    color: #d35400;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 0.5rem 0;
+}
+
+ul li a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+.gallery .images {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: calc(33.333% - 1rem);
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(0.85);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #0066cc;
+    color: #fff;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+        margin-top: 0.5rem;
+    }
+
+    main {
+        margin: 1rem;
+        padding: 0.8rem;
+    }
+
+    .gallery img {
+        width: calc(50% - 0.5rem);
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    header p {
+        font-size: 1rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+
+    footer {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
