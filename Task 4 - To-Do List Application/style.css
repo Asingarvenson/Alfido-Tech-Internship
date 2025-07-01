@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #d9afd9, #97d9e1);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.wrapper {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.top-heading {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+#planInput {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #4a90e2;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#addPlanBtn {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.plan {
+    background-color: #f0f4ff;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.plan h2 {
+    margin-bottom: 0.8rem;
+    color: #444;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1.5px solid #aaa;
+    border-radius: 6px;
+}
+
+.task-input button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 6px;
+    background: #ffffff;
+    border-left: 3px solid #4a90e2;
+    transition: 0.2s;
+}
+
+.task-item.done span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-buttons span {
+    margin-left: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.task-buttons span.done-toggle {
+    color: #2ecc71;
+}
+
+/* For Responsive */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .plan-input,
+    .task-input {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #planInput,
+    .task-input input {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    #addPlanBtn,
+    .addTaskBtn {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-buttons {
+        margin-top: 5px;
+    }
+
+    .task-buttons span {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    .wrapper {
+        padding: 1rem;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .plan h2 {
+        font-size: 1.1rem;
+    }
+
+    .task-item {
+        font-size: 0.95rem;
+    }
+
+    .task-buttons span {
+        font-size: 1.1rem;
+    }
+}
